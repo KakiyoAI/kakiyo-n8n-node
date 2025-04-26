@@ -1118,7 +1118,7 @@ export class Kakiyo implements INodeType {
 				// Make the request
 				const options: any = {
 					method,
-					url: endpoint,
+					path: endpoint,
 					qs,
 				};
 
