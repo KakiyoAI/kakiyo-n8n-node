@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-kakiyo",
+  "name": "kakiyo-n8n-nodes",
   "version": "0.1.0",
   "description": "n8n node to interact with Kakiyo API for LinkedIn outreach automation",
   "keywords": [
