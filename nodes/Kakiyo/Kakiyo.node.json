@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-base.kakiyo",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Marketing", "Sales", "Communication"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://docs.kakiyo.com/authentication"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://docs.kakiyo.com/api-reference/introduction"
+			}
+		]
+	}
+}

@@ -1,46 +1,74 @@
-![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
+# n8n-nodes-kakiyo
 
-# n8n-nodes-starter
+This is an n8n community node. It lets you use Kakiyo in your n8n workflows.
 
-This repo contains example nodes to help you get started building your own custom integrations for [n8n](n8n.io). It includes the node linter and other dependencies.
+[Kakiyo](https://kakiyo.com/) is a powerful API-driven platform that helps businesses automate and scale their LinkedIn outreach and nurture campaigns with AI-powered conversations.
 
-To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
+[n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
-## Prerequisites
+## Installation
 
-You need the following installed on your development machine:
+Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in the n8n community nodes documentation.
 
-* [git](https://git-scm.com/downloads)
-* Node.js and pnpm. Minimum version Node 18. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
-* Install n8n with:
-  ```
-  pnpm install n8n -g
-  ```
-* Recommended: follow n8n's guide to [set up your development environment](https://docs.n8n.io/integrations/creating-nodes/build/node-development-environment/).
+## Operations
 
-## Using this starter
+### Campaign
 
-These are the basic steps for working with the starter. For detailed guidance on creating and publishing nodes, refer to the [documentation](https://docs.n8n.io/integrations/creating-nodes/).
+- **Create**: Create a new outreach campaign
+- **Get All**: List all campaigns
+- **Update**: Update an existing campaign
+- **Pause**: Pause an active campaign
+- **Resume**: Resume a paused campaign
+- **Get Stats**: Get statistics for a campaign
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from this template repository.
-2. Clone your new repo:
-   ```
-   git clone https://github.com/<your organization>/<your-repo-name>.git
-   ```
-3. Run `pnpm i` to install dependencies.
-4. Open the project in your editor.
-5. Browse the examples in `/nodes` and `/credentials`. Modify the examples, or replace them with your own nodes.
-6. Update the `package.json` to match your details.
-7. Run `pnpm lint` to check for errors or `pnpm lintfix` to automatically fix errors when possible.
-8. Test your node locally. Refer to [Run your node locally](https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/) for guidance.
-9. Replace this README with documentation for your node. Use the [README_TEMPLATE](README_TEMPLATE.md) to get started.
-10. Update the LICENSE file to use your details.
-11. [Publish](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) your package to npm.
+### Prospect
 
-## More information
+- **Add Single**: Add a single prospect to a campaign
+- **Add Batch**: Add multiple prospects to a campaign
+- **Get All**: List all prospects in a campaign
+- **Get Details**: Get details about a prospect and conversation
+- **Pause Conversation**: Pause a conversation with a prospect
+- **Resume Conversation**: Resume a paused conversation
+- **Qualify**: Mark a prospect as qualified
 
-Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
+### Product
 
-## License
+- **Create**: Create a new product
+- **Get All**: List all products
 
-[MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
+### Prompt
+
+- **Create**: Create a new prompt template
+- **Get All**: List all prompt templates
+
+### Agent
+
+- **Create**: Create a new agent
+- **Get All**: List all agents
+- **Get Details**: Get details about an agent
+- **Setup**: Set up an agent with LinkedIn credentials
+- **Pause**: Pause an agent
+- **Resume**: Resume a paused agent
+
+## Credentials
+
+This node uses the Kakiyo API key for authentication, which you can obtain from your Kakiyo dashboard.
+
+## Example Usage
+
+This workflow shows how to create a new campaign and add prospects to it:
+
+1. **Kakiyo: Get All Products** - First, retrieve all your products to select the right product ID
+2. **Kakiyo: Get All Prompts** - Get all your prompts to select the right prompt ID
+3. **Kakiyo: Get All Agents** - Get all agents to select the right agent ID
+4. **Kakiyo: Create Campaign** - Create a new campaign using the IDs from previous steps
+5. **Kakiyo: Add Batch Prospects** - Add multiple prospects to the newly created campaign
+
+## Resources
+
+* [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
+* [Kakiyo API documentation](https://docs.kakiyo.com/api-reference/introduction)
+
+## Version History
+
+- 1.0.0 - Initial release
